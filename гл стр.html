@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Интерактивная карта</title>
+  <style>
+    .info-box {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #aaa;
+      background-color: #f9f9f9;
+      display: none;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+
+<h2>Интерактивная карта</h2>
+
+
+<img src="https://fs.znanio.ru/methodology/images/0d/10/0d102b1bd1d87953f8074452bd5e478c0a7439c8.jpg" usemap="#image-map" >
+
+<map name="image-map">
+  <!-- Зона 1: правильная poly -->
+  <area shape="poly"
+        coords="311,198,312,223,302,239,356,220,369,240,440,242,451,204,515,193,512,176,471,194,430,182,406,165"
+        href="#"
+        onclick="showInfo('Зона 1: Здесь обитает загадочное существо.'); return false;">
+
+ 
+  <area shape="poly"
+        coords="303,246,287,274,336,265,381,293,459,284,473,290,532,284,527,258,546,250,582,257,589,239,569,244,524,198,458,217,455,249,365,248,354,232"
+        href="#"
+        onclick="showInfo('Зона 2: Тут находится древний храм.'); return false;">
+
+
+  <area shape="poly"
+        coords="110,240,141,223,176,232,226,290,147,244"
+        href="#"
+        onclick="showInfo('Зона 2: Волшебное озеро.'); return false;">
+
+  <area shape="poly"
+        coords="296,194,302,215,288,269,256,319,222,351,233,290,213,262,227,259,248,262,272,279"
+        href="#"
+        onclick="showInfo('Зона 3: Волшебное озеро.'); return false;">
+  
+  <area shape="poly"
+        coords="678,324,643,326,635,347,639,370,606,380,622,416,613,433,516,446,430,472,432,455,390,412,444,447,486,445,524,435,495,401,536,419,576,375,609,351,633,350,633,320,609,311,634,283,600,268,587,258,631,240,658,265,685,252"
+        href="#"
+        onclick="showInfo('Зона 3: Волшебное озеро.'); return false;">
+
+
+  <area shape="poly"
+        coords="274,307,282,285,339,274,378,302,457,296,475,301,547,291,536,263,586,268,620,286,604,308,571,311,555,325,522,322,445,357,431,324,366,344,358,306,317,291"
+        href="#"
+        onclick="showInfo('Зона 4: Волшебное озеро.'); return false;">
+
+  <area shape="poly"
+        coords="56,277,82,244,96,264,105,247,134,247,212,290,223,311,215,343,173,324,175,294,118,276"
+        href="#"
+        onclick="showInfo('Зона 4: Волшебное озеро.'); return false;">
+
+  <area shape="poly"
+        coords="536,331,560,334,578,316,605,319,611,329,626,323,630,344,605,347,560,373,531,408,495,392,488,401,516,436,444,443,389,401,386,412,428,466,403,503,359,471,364,447,345,425,289,432,279,412,291,361,260,359,190,392,174,472,108,375,152,361,150,337,122,326,85,341,79,311,63,290,84,279,103,288,116,281,161,299,165,329,227,361,277,313,326,302,356,316,355,348,367,355,421,331,443,367"
+        href="#"
+        onclick="showInfo('Зона 5: Здесь обитает загадочное существо.'); return false;">
+</map>
+
+<div class="info-box" id="infoBox">
+  <p>Нажми на зону на карте.</p>
+</div>
+
+<script>
+  function showInfo(text) {
+    const box = document.getElementById('infoBox');
+    box.innerHTML = `<p>${text}</p>`;
+    box.style.display = 'block';
+  }
+</script>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xml:lang="ru"
+    lang="ru"
+      dir="ltr"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# inaturalist: http://ogp.me/ns/fb/inaturalist#">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="ru">
+    <title>  Информация о таксонах
+ ·  iNaturalist </title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.inaturalist.org/sites/1-favicon.png?1573071870" />
+    <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/blueprint_bundle-84e5f7032f07459227e8dfdaefd2085aa52f78c56a0b4438c1542de31e50d7e2.css" />
+      <meta name="viewport" content="width=980">
+     <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/font-awesome-2f50fecc97d9114f8339e0a5f68490c63e2b9c94374eeee6c7685856b2d4669d.css" />
+<link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/application_bundle-787b37f5213c893558ebb05f299ef3cb79edce0803dda33f33296914ce0e0792.css" />
+  <link rel="stylesheet" media="screen" href="https://static.inaturalist.org/sites/1-stylesheet.css?1573579729" />
+<!--[if lte IE 7]>
+  <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/ie-86931db2aba1ba11895127b4ba428745f10c9493c093d6bb18c688b0e47afcaf.css" />
+<![endif]-->
+
+    <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/blueprint-inat-90960428ed157d4ae5b0cdd94fabd4e264775f0c57a4524677f35fb678cf1b52.css" />
+    <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/blueprint-bootstrap-1875c379acd4e5e791227647aeaca6dba39bf0f8fab01bf712b50e2fb0e676e4.css" />
+    <script src="https://www.inaturalist.org/assets/jquery/jquery-1.9.1.min-f8ad053fa796cfea51b2a3b04c13e09862e1459faa8967d7e3599b7cfef68f28.js"></script>
+    <script src="https://www.inaturalist.org/assets/jquery/jquery-ui-1.9.1.min-6bd9e79734919acc66fa4b01e619ace2f1d1d543a5295ea2ce7f601105ed25be.js"></script>
+    <script src="https://www.inaturalist.org/assets/bootstrap.min-0600e6a3f5f6fc0fa52ac2829d50e33457db95221882af5b8a04a9c3875477f8.js"></script>
+    
+    <script type="text/javascript">
+  //<![CDATA[
+    I18n = { }
+    I18n.defaultLocale = "en";
+    I18n.locale = "ru";
+    I18n.fallbacks = true;
+  //]]>
+</script>
+<script src="https://www.inaturalist.org/assets/i18n/translations/ru-4759701584f33a125e6359e3a110df7e79df2840e4a9f4113e6de5f619d50433.js"></script>
+
+    <script type="text/javascript">
+        var SITE = {
+          name: "iNaturalist",
+          short_name: "iNat",
+          logo_square: "https://static.inaturalist.org/sites/1-logo_square.png?1573071870"
+        };
+      var PREFERRED_PLACE;
+      var CONTROLLER_ACTION = "TaxaController::index";
+      var CONFIG = {
+        content_freeze_enabled: false
+      };
+    </script>
+    <script src="https://www.inaturalist.org/assets/application_bundle-696608e016f5e8a950a12b83aa36908ca92097fb72b8755a6b783a4c1d861675.js"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="3x/7Yp7IKzMFPJS8x5ghmbO5rHDHXlquLBqO2wwvp4WbHEAB67o8UrcQmWd7KacRbGDd7Kg8RH1hGiMYgh8oQg==" />
+    <meta name="config:inaturalist_api_url" content="https://api.inaturalist.org/v1">
+    <meta property="og:type" content="website"/>
+      <meta property="og:site_name" content="iNaturalist"/>
+    
+    <link rel="stylesheet" media="screen" href="https://www.inaturalist.org/assets/taxa/_index-17e01b9a4feb05b41c3f05579fb8d3cabe7b7dcc9179a85cbaf9eb5b94f28842.css" />
+<script src="https://www.inaturalist.org/assets/taxa/index-0e4ead0461dd587cd383013cae16bc1597a8bd7160110b0e50f352742581b0dc.js"></script>
+<style type="text/css" media="screen">
+  #featured {
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 390px;
+    position: relative;
+  }
+  .featured_taxon {
+    top: 0;
+    position: absolute;
+    width: 950px;
+    overflow: hidden;
+    height: 390px;
+    color: white;
+  }
+  
+  #featured a {
+    text-shadow: 0 1px 1px black;
+  }
+  #featured .taxonimage {
+    width: 1024px;
+    position: absolute;
+    top: -120px;
+    right: 0;
+    z-index: 0;
+  }
+  
+  #featured .taxon, 
+  #desccol, 
+  #featured .taxon_observations,
+  #photocredit {
+    z-index: 1;
+  }
+  
+  #desccol {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    height: 280px;
+  }
+  
+  #desccol .readable {
+    font-size: 115%;
+  }
+  
+  #featured .taxon {
+    position: relative;
+    left: 0;
+    font-family: Georgia, serif;
+    font-size: 140%;
+    position: absolute;
+    padding: 10px;
+  }
+  
+  #desccol a,
+  #featured .taxon_observations a {
+    color: #73AC13;
+  }
+  #desccol a:hover,
+  #featured .taxon_observations a:hover {
+    color: #A7D741;
+  }
+  #featured .taxon a,
+  #featured .taxon a:hover {
+    color: white;
+  }
+  
+  #featured .taxon a:hover {
+    border-bottom: 1px dotted white;
+  }
+  
+  
+  #desccol, 
+  #featured .taxon {
+    background-color: #222;
+  }
+  
+  #featured .taxon_observations,
+  #photocredit {
+    background-color: black;
+  }
+  
+  #desccol, 
+  #featured .taxon,
+  #featured .taxon_observations,
+  #photocredit {
+    opacity: 0.9;
+  }
+  
+  #featured .othernames {
+    font-size: 90%;
+  }
+  
+  #featured .taxon_observations {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 60px;
+    padding: 20px 20px 10px;
+    line-height: 1.3;
+  }
+  
+  #photocredit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+  }
+  
+  #recently_observed img {
+    max-width: 164px;
+    vertical-align: middle;
+  }
+  #recently_observed img.iconic {
+    max-width: 20px;
+  }
+  
+  #recently_observed p .date {
+    font-size: 80%;
+  }
+  #recently_observed p {
+    margin-bottom: 10px;
+  }
+  
+  .navdot {
+    font-size: 150%;
+  }
+  .navdot,
+  .navarr {
+    opacity: 0.5;
+    vertical-align: middle;
+    color: #666;
+  }
+  
+  .navarr { visibility: hidden; }
+  center:hover .navarr { visibility: visible; }
+  
+  .navdot.selected {
+    opacity: 1;
+  }
+
+  .pageheader form.buttonrow .default.button {
+    margin-left: 10px;
+  }
+</style>
+<!--[if lt IE 20]>
+<style type="text/css" media="screen">
+  #featured .extra,
+  #featurednav {
+    display: none;
+  }
+  #featured .featured_taxon { position: relative; }
+</style>
+<![endif]-->
+
+    
+      <meta property="og:image" content="https://static.inaturalist.org/sites/1-shareable_image.png?1573071871"/>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-TV5BYME7B4'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  
+
+  
+    
+    gtag('config', 'G-TV5BYME7B4', {"anonymize_ip":true});
+  
+
+  
+</script>
+</head>
+<body class="browser">
+  <div id="bodywrapper">
+    
+      <div class="bootstrap" id="header">
+<div class="navtabs" id="logonav">
+<a class="logolink innertab" href="/" title="iNaturalist">
+
+</a>
+</div>
+<div class="search navtabs form-group" id="headersearch">
+<div class="searchwrapper">
+<input class="form-control" placeholder="Поиск" tabindex="-1" type="text" />
+</div>
+<button class="btn btn-default btn-inat btn-focus show-btn">
+<i class="fa fa-search"></i>
+</button>
+<button class="btn btn-link hide-btn">
+<i class="fa fa-times-circle"></i>
+</button>
+</div>
+<ul class="navtabs" id="mainnav">
+<li class="navtab active">
+
+</li>
+
+<div class="dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" id="header-community-dropdown-toggle">
+
+
+</div>
+<ul aria-labelledby="header-community-dropdown-toggle" class="dropdown-menu dropdown-menu-left">
+
+</ul>
+</div>
+</li>
+
+<div class="dropdown">
+<div aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" id="header-more-dropdown-toggle">
+
+
+</div>
+<ul aria-labelledby="header-more-dropdown-toggle" class="dropdown-menu">
+
+
+<li class="divider" role="separator"></li>
+
+</ul>
+</div>
+</li>
+</ul>
+<ul class="" id="usernav">
+<li class="navtab signedout">
+
+</li>
+</ul>
+</div>
+
+    
+    
+
+
+    <div id="wrapper" class="container clear">
+      
+
+<div class="pageheader">
+  <div class="right">
+    <form class="clear buttonrow" action="/taxa/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+  <label for="q">Поиск</label>
+  <input type="text" name="q" id="q" class="text" />
+  <input type="submit" class="default button" value="Найти виды" />
+</form>
+  </div>
+  <h2>Информация о таксонах<span class="description"></span></h2>
+</div>
+
+<div id="featured" class="column span-24">
+    <div id="featured_taxon_0" class="featured_taxon " style="left: 0px">
+        <span class="taxon taxon-53713  species Fungi">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/53713-Laetiporus-sulphureus">Трутовик Серно-Жёлтый</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Laetiporus sulphureus</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <span class="navarr">&larr;</span>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Трутовик серно-жёлтый</b> (лат. Laetíporus sulphúreus) — гриб-трутовик семейства Полипоровые (<i>Polyporaceae</i>). Условно съедобен.
+          <a class="nobr" href="/taxa/53713-Laetiporus-sulphureus">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          mark935 наблюдал это 2025-04-03 в Washington County, MD, USA
+
+          <div>
+            <a class="readmore" href="/observations/271964215">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Stephen John Davies, некоторые права защищены (CC BY-NC), загрузил Stephen John Davies</a>
+        </div>
+      <a href="/taxa/53713-Laetiporus-sulphureus"><img class="taxonimage large photo" alt="Трутовик Серно-Жёлтый - Photo (с) Stephen John Davies, некоторые права защищены (CC BY-NC), загрузил Stephen John Davies" title="Трутовик Серно-Жёлтый - Photo (с) Stephen John Davies, некоторые права защищены (CC BY-NC), загрузил Stephen John Davies" src="https://inaturalist-open-data.s3.amazonaws.com/photos/42106925/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_1" class="featured_taxon extra" style="left: 950px">
+        <span class="taxon taxon-1121984  species Plantae">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/1121984-Haplodontium-macrocarpum">Гаплодонтиум Крупноплодный</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Haplodontium macrocarpum</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          
+          <a class="nobr" href="/taxa/1121984-Haplodontium-macrocarpum">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          bluestems наблюдал это 2023-07-16 в Division No. 14, CA-AB, CA
+
+          <div>
+            <a class="readmore" href="/observations/173657522">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Michael Rudy, все права защищены, загрузил Michael Rudy</a>
+        </div>
+      <a href="/taxa/1121984-Haplodontium-macrocarpum"><img class="taxonimage large photo" alt="Гаплодонтиум Крупноплодный - Photo (с) Michael Rudy, все права защищены, загрузил Michael Rudy" title="Гаплодонтиум Крупноплодный - Photo (с) Michael Rudy, все права защищены, загрузил Michael Rudy" src="https://static.inaturalist.org/photos/55185587/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_2" class="featured_taxon extra" style="left: 1900px">
+        <span class="taxon taxon-21723  species Amphibia">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/21723-Atelopus-zeteki">Ателоп Цетека</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Atelopus zeteki</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Ателоп Цетека</b> (<i>Atelopus zeteki</i>) — вид земноводных рода <i>Atelopus</i> из семейства <i>Bufonidae</i>. Видовое латинское название дано в честь американского энтомолога Джеймса Цетека (1886—1959).
+          <a class="nobr" href="/taxa/21723-Atelopus-zeteki">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          infiniti2 наблюдал это 2025-04-15 в Los Angeles County, US-CA, US
+
+          <div>
+            <a class="readmore" href="/observations/270672266">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Dennis Nilsson, все права защищены, загрузил Dennis Nilsson</a>
+        </div>
+      <a href="/taxa/21723-Atelopus-zeteki"><img class="taxonimage large photo" alt="Ателоп Цетека - Photo (с) Dennis Nilsson, все права защищены, загрузил Dennis Nilsson" title="Ателоп Цетека - Photo (с) Dennis Nilsson, все права защищены, загрузил Dennis Nilsson" src="https://static.inaturalist.org/photos/56362/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_3" class="featured_taxon extra" style="left: 2850px">
+        <span class="taxon taxon-9424  species Aves">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/9424-Pipilo-erythrophthalmus">Красноглазый Тауи</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Pipilo erythrophthalmus</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Красноглазый тауи</b> (лат. Pipilo erythrophthalmus) — вид певчих воробьиных птиц из семейства Passerellidae.
+          <a class="nobr" href="/taxa/9424-Pipilo-erythrophthalmus">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          james3311 наблюдал это 2025-04-21 в Hiram, ME 04041, USA
+
+          <div>
+            <a class="readmore" href="/observations/271970125">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Terry Sohl, некоторые права защищены (CC BY-NC), загрузил Terry Sohl</a>
+        </div>
+      <a href="/taxa/9424-Pipilo-erythrophthalmus"><img class="taxonimage large photo" alt="Красноглазый Тауи - Photo (с) Terry Sohl, некоторые права защищены (CC BY-NC), загрузил Terry Sohl" title="Красноглазый Тауи - Photo (с) Terry Sohl, некоторые права защищены (CC BY-NC), загрузил Terry Sohl" src="https://inaturalist-open-data.s3.amazonaws.com/photos/45584021/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_4" class="featured_taxon extra" style="left: 3800px">
+          <span class="taxon taxon-557276  species Insecta "><a href="https://www.inaturalist.org/taxa/557276-Podisma-goidanichi"><span class="sciname">Podisma goidanichi</span></a></span>
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          
+          <a class="nobr" href="/taxa/557276-Podisma-goidanichi">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          dariop9167 наблюдал это 2024-08-29 в Gran Sasso e Monti della Laga, Abruzzo, IT
+
+          <div>
+            <a class="readmore" href="/observations/239273433">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Roberto Sindaco, некоторые права защищены (CC BY-NC-SA), загрузил Roberto Sindaco</a>
+        </div>
+      <a href="/taxa/557276-Podisma-goidanichi"><img class="taxonimage large photo" alt="Podisma goidanichi - Photo (с) Roberto Sindaco, некоторые права защищены (CC BY-NC-SA), загрузил Roberto Sindaco" title="Podisma goidanichi - Photo (с) Roberto Sindaco, некоторые права защищены (CC BY-NC-SA), загрузил Roberto Sindaco" src="https://inaturalist-open-data.s3.amazonaws.com/photos/1621164/large.JPG" /></a>
+    </div>
+    <div id="featured_taxon_5" class="featured_taxon extra" style="left: 4750px">
+        <span class="taxon taxon-40902  species Mammalia">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/40902-Pteropus-vampyrus">Гигантская Летучая Лисица</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Pteropus vampyrus</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Гигантская летучая лисица</b>, или <b>большая летучая лисица</b>, или <b>калонг</b> (<i>Pteropus vampyrus</i>) — вид рода летучих лисиц семейства крыланов.
+          <a class="nobr" href="/taxa/40902-Pteropus-vampyrus">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          bittor наблюдал это в прошлом в Bali, ID
+
+          <div>
+            <a class="readmore" href="/observations/271410782">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) dougnaturalist, все права защищены</a>
+        </div>
+      <a href="/taxa/40902-Pteropus-vampyrus"><img class="taxonimage large photo" alt="Гигантская Летучая Лисица - Photo (с) dougnaturalist, все права защищены" title="Гигантская Летучая Лисица - Photo (с) dougnaturalist, все права защищены" src="https://static.inaturalist.org/photos/61427113/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_6" class="featured_taxon extra" style="left: 5700px">
+          <span class="taxon taxon-201419  species Plantae "><a href="https://www.inaturalist.org/taxa/201419-Syntrichia-caninervis"><span class="sciname">Syntrichia caninervis</span></a></span>
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <i><b>Syntrichia caninervis</b></i> (лат.) — вид мхов семейства Поттиевые (<i>Pottiaceae</i>) порядка Поттиевые (<i>Pottiales</i>).
+          <a class="nobr" href="/taxa/201419-Syntrichia-caninervis">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          crediblecorvid наблюдал это 2025-04-16 в Aztec, NM, US
+
+          <div>
+            <a class="readmore" href="/observations/270857214">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) jennaekwealor, некоторые права защищены (CC BY-NC)</a>
+        </div>
+      <a href="/taxa/201419-Syntrichia-caninervis"><img class="taxonimage large photo" alt="Syntrichia caninervis - Photo (с) jennaekwealor, некоторые права защищены (CC BY-NC)" title="Syntrichia caninervis - Photo (с) jennaekwealor, некоторые права защищены (CC BY-NC)" src="https://inaturalist-open-data.s3.amazonaws.com/photos/5047498/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_7" class="featured_taxon extra" style="left: 6650px">
+        <span class="taxon taxon-52771  species Insecta">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/52771-Gonepteryx-rhamni">Крушинница</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Gonepteryx rhamni</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Круши́нница</b>, или <b>лимо́нница</b>, или <b>лимонница обыкновенная</b>, или <b>лимонница крушинная</b>, (лат. Gonepteryx rhamni) — дневная бабочка из семейства белянок (<i>Pieridae</i>). Видовое название происходит от лат. Rhamnus — крушина, одно из кормовых растений гусеницы....
+          <a class="nobr" href="/taxa/52771-Gonepteryx-rhamni">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          essjott наблюдал это 2025-04-21 в Haidhofstraße, Baden, Lower Austria, AT
+
+          <div>
+            <a class="readmore" href="/observations/271963428">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Vlastimil Lata, все права защищены, загрузил Vlastimil Lata</a>
+        </div>
+      <a href="/taxa/52771-Gonepteryx-rhamni"><img class="taxonimage large photo" alt="Крушинница - Photo (с) Vlastimil Lata, все права защищены, загрузил Vlastimil Lata" title="Крушинница - Photo (с) Vlastimil Lata, все права защищены, загрузил Vlastimil Lata" src="https://static.inaturalist.org/photos/213945610/large.jpeg" /></a>
+    </div>
+    <div id="featured_taxon_8" class="featured_taxon extra" style="left: 7600px">
+        <span class="taxon taxon-51119  species Plantae">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/51119-Nymphaea-odorata">Кувшинка Душистая</a>
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Nymphaea odorata</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          
+          <a class="nobr" href="/taxa/51119-Nymphaea-odorata">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          aaenriquez наблюдал это 2025-04-21 в Burke
+
+          <div>
+            <a class="readmore" href="/observations/271960255">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) lvconrad1977, некоторые права защищены (CC BY-NC), загрузил lvconrad1977</a>
+        </div>
+      <a href="/taxa/51119-Nymphaea-odorata"><img class="taxonimage large photo" alt="Кувшинка Душистая - Photo (с) lvconrad1977, некоторые права защищены (CC BY-NC), загрузил lvconrad1977" title="Кувшинка Душистая - Photo (с) lvconrad1977, некоторые права защищены (CC BY-NC), загрузил lvconrad1977" src="https://inaturalist-open-data.s3.amazonaws.com/photos/88047279/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_9" class="featured_taxon extra" style="left: 8550px">
+        <span class="taxon taxon-848323  superorder Mammalia">
+    <span class="comname ">
+        <a href="https://www.inaturalist.org/taxa/848323-Euarchontoglires">Эуархонтоглиры</a>
+    </span>
+      <span class="othernames">
+          (<span class="rank">Надотряд</span> <span class="sciname">Euarchontoglires</span>)
+      </span>
+  </span>
+
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot selected" href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&rarr;</a>
+        </center>
+        <div class="readable">
+          <b>Euarchontoglires</b> — надотряд плацентарных млекопитающих, в состав которого входят грандотряды грызунообразные и эуархонты (к последнему, в частности, относится и человек).
+          <a class="nobr" href="/taxa/848323-Euarchontoglires">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          mandy388 наблюдал это 2025-04-20 в East Dr, Vestal, NY, US
+
+          <div>
+            <a class="readmore" href="/observations/271970464">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">никакие права не защищены, загрузил Abhas Misraraj</a>
+        </div>
+      <a href="/taxa/848323-Euarchontoglires"><img class="taxonimage large photo" alt="Эуархонтоглиры - Photo никакие права не защищены, загрузил Abhas Misraraj" title="Эуархонтоглиры - Photo никакие права не защищены, загрузил Abhas Misraraj" src="https://inaturalist-open-data.s3.amazonaws.com/photos/83336441/large.jpg" /></a>
+    </div>
+    <div id="featured_taxon_10" class="featured_taxon extra" style="left: 9500px">
+          <span class="taxon taxon-764606  species Plantae "><a href="https://www.inaturalist.org/taxa/764606-Epidendrum-imperator"><span class="sciname">Epidendrum imperator</span></a></span>
+      <div id="desccol">
+        <center id="featurednav">
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navarr" href="#">&larr;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_0&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_0&#39;, {axis: &#39;x&#39;})" class="navdot_0 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_1&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_1&#39;, {axis: &#39;x&#39;})" class="navdot_1 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_2&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_2&#39;, {axis: &#39;x&#39;})" class="navdot_2 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_3&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_3&#39;, {axis: &#39;x&#39;})" class="navdot_3 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_4&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_4&#39;, {axis: &#39;x&#39;})" class="navdot_4 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_5&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_5&#39;, {axis: &#39;x&#39;})" class="navdot_5 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_6&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_6&#39;, {axis: &#39;x&#39;})" class="navdot_6 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_7&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_7&#39;, {axis: &#39;x&#39;})" class="navdot_7 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_8&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_8&#39;, {axis: &#39;x&#39;})" class="navdot_8 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_9&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_9&#39;, {axis: &#39;x&#39;})" class="navdot_9 navdot " href="#">&middot;</a>
+            <a onclick="$(&#39;.navdot&#39;).removeClass(&#39;selected&#39;);$(&#39;.navdot_10&#39;).addClass(&#39;selected&#39;);$(&#39;#featured&#39;).scrollTo(&#39;#featured_taxon_10&#39;, {axis: &#39;x&#39;})" class="navdot_10 navdot selected" href="#">&middot;</a>
+            <span class="navarr">&rarr;</span>
+        </center>
+        <div class="readable">
+          
+          <a class="nobr" href="/taxa/764606-Epidendrum-imperator">Узнать больше &raquo;</a>
+        </div>
+      </div>
+
+      <div class="taxon_observations">
+          biodabird наблюдал это 2022-08-13 в San Cayetano, Cundinamarca, Colombia
+
+          <div>
+            <a class="readmore" href="/observations/133022425">Просмотр</a>
+          </div>
+      </div>
+        <div id="photocredit">
+          Фото: <a href="/taxa">(с) Felix Uribe, некоторые права защищены (CC BY-NC), загрузил Felix Uribe</a>
+        </div>
+      <a href="/taxa/764606-Epidendrum-imperator"><img class="taxonimage large photo" alt="Epidendrum imperator - Photo (с) Felix Uribe, некоторые права защищены (CC BY-NC), загрузил Felix Uribe" title="Epidendrum imperator - Photo (с) Felix Uribe, некоторые права защищены (CC BY-NC), загрузил Felix Uribe" src="https://inaturalist-open-data.s3.amazonaws.com/photos/363275143/large.jpeg" /></a>
+    </div>
+</div>
+
+<div id="iconic_taxa" class="column span-19">
+  <div id="Plantae" class="iconic_taxon clear column span-6 first">
+    <div class="photos clear">
+        <a class="" href="rost.html" target="_blank"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/221143410/square.jpeg" /></a>
+        <a class="" href="rost.html" target="_blank"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/184018542/square.jpg" /></a>
+        <a class="last" href="rost.html" target="_blank"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/54326291/square.jpg" /></a>
+        <a class="" href="rost.html" target="_blank"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/41678716/square.jpg" /></a>
+        <a class="" href="rost.html" target="_blank"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/352462297/square.jpeg" /></a>
+        <a class="last" href="rost.html>" target="_blank" <img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/30244929/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="rost.html.html" target="_blank">
+          <span class="taxon taxon-47126  kingdom Plantae">
+    <span class="comname ">
+        Растения
+    </span>
+      <span class="othernames">
+          (<span class="rank">Царство</span> <span class="sciname">Plantae</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Actinopterygii" class="iconic_taxon clear column span-6 ">
+    <div class="photos clear">
+        <a class="" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/252526503/square.jpg" /></a>
+        <a class="" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/106536789/square.jpeg" /></a>
+        <a class="last" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/404897201/square.jpg" /></a>
+        <a class="" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/33570742/square.jpeg" /></a>
+        <a class="" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/129917977/square.jpeg" /></a>
+        <a class="last" href="/taxa/47178-Actinopterygii"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/49809378/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47178-Actinopterygii">
+          <span class="taxon taxon-47178  class Actinopterygii">
+    <span class="comname ">
+        Лучепёрые Рыбы
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Actinopterygii</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Mammalia" class="iconic_taxon clear column span-6 last">
+    <div class="photos clear">
+        <a class="" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/80551250/square.jpg" /></a>
+        <a class="" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: Drriss &amp; Marrionn" src="https://inaturalist-open-data.s3.amazonaws.com/photos/2930470/square.jpg" /></a>
+        <a class="last" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: nik.borrow" src="https://inaturalist-open-data.s3.amazonaws.com/photos/8277567/square.jpg" /></a>
+        <a class="" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: Elizabeth Haslam" src="https://inaturalist-open-data.s3.amazonaws.com/photos/2725915/square.jpg" /></a>
+        <a class="" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: Aaron Jacobs" src="https://inaturalist-open-data.s3.amazonaws.com/photos/11414137/square.jpg" /></a>
+        <a class="last" href="/taxa/40151-Mammalia"><img width="75" height="75" title="Фото: Tambako the Jaguar" src="https://inaturalist-open-data.s3.amazonaws.com/photos/24988754/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/40151-Mammalia">
+          <span class="taxon taxon-40151  class Mammalia">
+    <span class="comname ">
+        Млекопитающие
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Mammalia</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Arachnida" class="iconic_taxon clear column span-6 first">
+    <div class="photos clear">
+        <a class="" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/160233243/square.jpg" /></a>
+        <a class="" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: Simon Grove (TMAG)" src="https://inaturalist-open-data.s3.amazonaws.com/photos/12411605/square.jpg" /></a>
+        <a class="last" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/67339865/square.jpeg" /></a>
+        <a class="" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: vipin baliga" src="https://static.inaturalist.org/photos/83463/square.jpg" /></a>
+        <a class="" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/12637215/square.jpg" /></a>
+        <a class="last" href="/taxa/47119-Arachnida"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/307073781/square.jpeg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47119-Arachnida">
+          <span class="taxon taxon-47119  class Arachnida">
+    <span class="comname ">
+        Паукообразные
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Arachnida</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Insecta" class="iconic_taxon clear column span-6 ">
+    <div class="photos clear">
+        <a class="" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/18333696/square.jpeg" /></a>
+        <a class="" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/49241333/square.jpg" /></a>
+        <a class="last" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/303179119/square.jpg" /></a>
+        <a class="" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/67213844/square.jpeg" /></a>
+        <a class="" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/277044515/square.jpeg" /></a>
+        <a class="last" href="/taxa/47158-Insecta"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/100466481/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47158-Insecta">
+          <span class="taxon taxon-47158  class Insecta">
+    <span class="comname ">
+        Насекомые
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Insecta</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Animalia" class="iconic_taxon clear column span-6 last">
+    <div class="photos clear">
+        <a class="" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/80678745/square.jpg" /></a>
+        <a class="" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/50089889/square.jpeg" /></a>
+        <a class="last" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/5710720/square.jpg" /></a>
+        <a class="" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: Elias Levy" src="https://inaturalist-open-data.s3.amazonaws.com/photos/59063541/square.jpg" /></a>
+        <a class="" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: alfonsator" src="https://inaturalist-open-data.s3.amazonaws.com/photos/170/square.jpg" /></a>
+        <a class="last" href="/taxa/1-Animalia"><img width="75" height="75" title="Фото: Pasha Kirillov" src="https://inaturalist-open-data.s3.amazonaws.com/photos/60747173/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/1-Animalia">
+          <span class="taxon taxon-1  kingdom Animalia">
+    <span class="comname ">
+        Животные
+    </span>
+      <span class="othernames">
+          (<span class="rank">Царство</span> <span class="sciname">Animalia</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Mollusca" class="iconic_taxon clear column span-6 first">
+    <div class="photos clear">
+        <a class="" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/58051104/square.jpg" /></a>
+        <a class="" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/6395776/square.jpg" /></a>
+        <a class="last" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/1403199/square.JPG" /></a>
+        <a class="" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: 
+Kah Kheng Lim, Susann Rossbach, Nathan R. Geraldi, Sebastian Schmidt-Roach, Ester A. Serrão and Carlos M. Duarte" src="https://inaturalist-open-data.s3.amazonaws.com/photos/155977031/square.jpg" /></a>
+        <a class="" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/8111603/square.jpg" /></a>
+        <a class="last" href="/taxa/47115-Mollusca"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/32399883/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47115-Mollusca">
+          <span class="taxon taxon-47115  phylum Mollusca">
+    <span class="comname ">
+        Моллюски
+    </span>
+      <span class="othernames">
+          (<span class="rank">Тип / отдел</span> <span class="sciname">Mollusca</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Aves" class="iconic_taxon clear column span-6 ">
+    <div class="photos clear">
+        <a class="" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/2967053/square.jpg" /></a>
+        <a class="" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: Terathopius" src="https://inaturalist-open-data.s3.amazonaws.com/photos/2946643/square.jpg" /></a>
+        <a class="last" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/70658079/square.jpg" /></a>
+        <a class="" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/101847726/square.jpeg" /></a>
+        <a class="" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/5864947/square.jpeg" /></a>
+        <a class="last" href="/taxa/3-Aves"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/213755059/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/3-Aves">
+          <span class="taxon taxon-3  class Aves">
+    <span class="comname ">
+        Птицы
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Aves</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Protozoa" class="iconic_taxon clear column span-6 last">
+    <div class="photos clear">
+        <a class="" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/28906584/square.jpg" /></a>
+        <a class="" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/157125794/square.jpg" /></a>
+        <a class="last" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/176600140/square.jpg" /></a>
+        <a class="" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: PROYECTO AGUA" src="https://inaturalist-open-data.s3.amazonaws.com/photos/1418/square.jpg" /></a>
+        <a class="" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/174936971/square.jpg" /></a>
+        <a class="last" href="/taxa/47686-Protozoa"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/250709982/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47686-Protozoa">
+          <span class="taxon taxon-47686  kingdom Protozoa">
+    <span class="comname ">
+        Простейшие
+    </span>
+      <span class="othernames">
+          (<span class="rank">Царство</span> <span class="sciname">Protozoa</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Chromista" class="iconic_taxon clear column span-6 first">
+    <div class="photos clear">
+        <a class="" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: NOAA&#39;s National Ocean Service" src="https://inaturalist-open-data.s3.amazonaws.com/photos/131300/square.jpg" /></a>
+        <a class="" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: InAweofGod&#39;sCreation" src="https://inaturalist-open-data.s3.amazonaws.com/photos/131297/square.jpg" /></a>
+        <a class="last" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: Marco Spiller" src="https://inaturalist-open-data.s3.amazonaws.com/photos/131298/square.jpg" /></a>
+        <a class="" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/250160521/square.jpg" /></a>
+        <a class="" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: PacificKlaus" src="https://inaturalist-open-data.s3.amazonaws.com/photos/131299/square.jpg" /></a>
+        <a class="last" href="/taxa/48222-Chromista"><img width="75" height="75" title="Фото: Ken-ichi" src="https://inaturalist-open-data.s3.amazonaws.com/photos/21074/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/48222-Chromista">
+          <span class="taxon taxon-48222  kingdom Chromista">
+    <span class="comname ">
+        Хромисты
+    </span>
+      <span class="othernames">
+          (<span class="rank">Царство</span> <span class="sciname">Chromista</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Fungi" class="iconic_taxon clear column span-6 ">
+    <div class="photos clear">
+        <a class="" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/260296784/square.jpg" /></a>
+        <a class="" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/128512207/square.jpg" /></a>
+        <a class="last" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/9123630/square.jpeg" /></a>
+        <a class="" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/112984148/square.jpeg" /></a>
+        <a class="" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/71658193/square.jpeg" /></a>
+        <a class="last" href="/taxa/47170-Fungi"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/4896433/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/47170-Fungi">
+          <span class="taxon taxon-47170  kingdom Fungi">
+    <span class="comname ">
+        Грибы
+    </span>
+      <span class="othernames">
+          (<span class="rank">Царство</span> <span class="sciname">Fungi</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Reptilia" class="iconic_taxon clear column span-6 last">
+    <div class="photos clear">
+        <a class="" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: Matthieu Berroneau" src="https://static.inaturalist.org/photos/29214589/square.jpg" /></a>
+        <a class="" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: Matthieu Berroneau" src="https://static.inaturalist.org/photos/37451332/square.jpg" /></a>
+        <a class="last" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/287874738/square.jpeg" /></a>
+        <a class="" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/174936957/square.jpg" /></a>
+        <a class="" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/341839492/square.jpeg" /></a>
+        <a class="last" href="/taxa/26036-Reptilia"><img width="75" height="75" title="Фото: " src="https://inaturalist-open-data.s3.amazonaws.com/photos/180799817/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/26036-Reptilia">
+          <span class="taxon taxon-26036  class Reptilia">
+    <span class="comname ">
+        Пресмыкающиеся
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Reptilia</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+  <div id="Amphibia" class="iconic_taxon clear column span-6 first">
+    <div class="photos clear">
+        <a class="" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/20797296/square.jpg" /></a>
+        <a class="" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/255185366/square.jpg" /></a>
+        <a class="last" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/250190855/square.jpg" /></a>
+        <a class="" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/56362/square.jpg" /></a>
+        <a class="" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: Arca de los Sapos" src="https://static.inaturalist.org/photos/85004/square.jpg" /></a>
+        <a class="last" href="/taxa/20978-Amphibia"><img width="75" height="75" title="Фото: " src="https://static.inaturalist.org/photos/20870406/square.jpg" /></a>
+    </div>
+    <h3>
+      <a href="/taxa/20978-Amphibia">
+          <span class="taxon taxon-20978  class Amphibia">
+    <span class="comname ">
+        Амфибии
+    </span>
+      <span class="othernames">
+          (<span class="rank">Класс</span> <span class="sciname">Amphibia</span>)
+      </span>
+  </span>
+
+</a>    </h3>
+  </div>
+</div>
+
+<div id="recently_observed" class="last column span-5">  
+  <div class="box clear">
+    <h3>Последние наблюдаемые</h3>
+    <p>
+      <a href="/taxa/55757-Chelidonium-majus"><img alt="Чистотел Большой - Photo (с) AnneTanne, некоторые права защищены (CC BY-NC)" title="Чистотел Большой - Photo (с) AnneTanne, некоторые права защищены (CC BY-NC)" class="small photo" src="https://inaturalist-open-data.s3.amazonaws.com/photos/9596/small.jpg" /></a>
+      <a href="/taxa/55757-Chelidonium-majus">
+          <span class="taxon taxon-55757  species Plantae">
+    <span class="comname ">
+        Чистотел Большой
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Chelidonium majus</span>)
+      </span>
+  </span>
+
+</a>        <span class="description date">,  21 Апрель 2025</span>
+    </p>
+    <p>
+      <a href="/taxa/40023-Testudo-graeca"><img alt="Средиземноморская Черепаха - Photo (с) Paul Cools, некоторые права защищены (CC BY-NC), загрузил Paul Cools" title="Средиземноморская Черепаха - Photo (с) Paul Cools, некоторые права защищены (CC BY-NC), загрузил Paul Cools" class="small photo" src="https://inaturalist-open-data.s3.amazonaws.com/photos/1843615/small.jpg" /></a>
+      <a href="/taxa/40023-Testudo-graeca">
+          <span class="taxon taxon-40023  species Reptilia">
+    <span class="comname ">
+        Средиземноморская Черепаха
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Testudo graeca</span>)
+      </span>
+  </span>
+
+</a>        <span class="description date">,  21 Апрель 2025</span>
+    </p>
+    <p>
+      <a href="/taxa/52592-Pararge-aegeria"><img alt="Краеглазка Эгерия - Photo (с) Felipe Hidalgo, некоторые права защищены (CC BY-NC), загрузил Felipe Hidalgo" title="Краеглазка Эгерия - Photo (с) Felipe Hidalgo, некоторые права защищены (CC BY-NC), загрузил Felipe Hidalgo" class="small photo" src="https://inaturalist-open-data.s3.amazonaws.com/photos/102255693/small.jpg" /></a>
+      <a href="/taxa/52592-Pararge-aegeria">
+          <span class="taxon taxon-52592  species Insecta">
+    <span class="comname ">
+        Краеглазка Эгерия
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Pararge aegeria</span>)
+      </span>
+  </span>
+
+</a>        <span class="description date">,  21 Апрель 2025</span>
+    </p>
+    <p>
+      <a href="/taxa/55643-Araschnia-levana"><img alt="Пестрокрыльница Изменчивая - Photo (с) adinie, некоторые права защищены (CC BY-NC), загрузил adinie" title="Пестрокрыльница Изменчивая - Photo (с) adinie, некоторые права защищены (CC BY-NC), загрузил adinie" class="small photo" src="https://inaturalist-open-data.s3.amazonaws.com/photos/252003141/small.jpeg" /></a>
+      <a href="/taxa/55643-Araschnia-levana">
+          <span class="taxon taxon-55643  species Insecta">
+    <span class="comname ">
+        Пестрокрыльница Изменчивая
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Araschnia levana</span>)
+      </span>
+  </span>
+
+</a>        <span class="description date">,  21 Апрель 2025</span>
+    </p>
+    <p>
+      <a href="/taxa/207977-Aglais-io"><img alt="Дневной Павлиний Глаз - Photo (с) S. Rae, некоторые права защищены (CC BY)" title="Дневной Павлиний Глаз - Photo (с) S. Rae, некоторые права защищены (CC BY)" class="small photo" src="https://inaturalist-open-data.s3.amazonaws.com/photos/4710619/small.jpg" /></a>
+      <a href="/taxa/207977-Aglais-io">
+          <span class="taxon taxon-207977  species Insecta">
+    <span class="comname ">
+        Дневной Павлиний Глаз
+    </span>
+      <span class="othernames">
+          (<span class="sciname">Aglais io</span>)
+      </span>
+  </span>
+
+</a>        <span class="description date">,  21 Апрель 2025</span>
+    </p>
+  </div>
+  <a href="/taxa/48460-Life/taxonomy_details">Таксономические детали &raquo</a>
+</div>
+
+
+</body>
+</html>
